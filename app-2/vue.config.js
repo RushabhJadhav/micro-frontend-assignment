@@ -13,17 +13,15 @@ module.exports = defineConfig({
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: "VueMainMFE",
+        name: "vueContainer",
         filename: "vueMain.js",
         remotes: {
           search: "search@http://localhost:8080/remoteEntry.js",
           footer: "footer@http://localhost:3000/reactEntry.js",
         },
-        // shared: {
-        //   vue: { singleton: true },
-        //   react: { singleton: true },
-        //   'react-dom': { singleton: true },
-        // },
+        exposes: {
+          './headerModule': './src/components/Header'
+        }
       }),
     ],
   },

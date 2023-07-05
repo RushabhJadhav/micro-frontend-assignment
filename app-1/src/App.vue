@@ -1,18 +1,18 @@
 <template>
   <div>
+    <VueContainer></VueContainer>
     <Weather></Weather>
-    <!-- <VueMainMFE></VueMainMFE> -->
   </div>
 </template>
 
 <script>
 import Weather from './components/Weather'
-// import VueMainMFE from './VueMainMFE/headerModule'
+import VueContainer from 'vueContainer/headerModule'
 
 export default {
   components: {
     Weather,
-    // VueMainMFE
+    VueContainer
   }
 }
 </script>

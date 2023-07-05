@@ -5,7 +5,6 @@ module.exports = defineConfig({
   // transpileDependencies: true,
   devServer: {
     port: 8080,
-    // https: true
   },
   publicPath: "http://127.0.0.1:8080/",
   configureWebpack: {
@@ -21,6 +20,9 @@ module.exports = defineConfig({
         exposes: {
           './searchModule': './src/components/Weather',
         },
+        remotes: {
+          vueContainer: "vueContainer@http://localhost:8081/vueMain.js"
+        }
       }),
     ],
   },

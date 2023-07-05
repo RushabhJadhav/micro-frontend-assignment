@@ -7,7 +7,6 @@
         <p v-if="celsiusData > 0">{{ celsiusData }}°C</p>
         <p v-if="fahrenheitData > 0">{{ fahrenheitData }}°F</p>
         <p>Description: {{ description }}</p>
-        <!-- <p>{{ error }}</p> -->
         <P>Visibility: {{ convertVisibility }} km</P>
         <P>Wind Speed: {{ convertSpeed }} km</P>
         <P>Pressure: {{ pressure }} hPa</P>
@@ -16,6 +15,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'weather-component',
     data() {
